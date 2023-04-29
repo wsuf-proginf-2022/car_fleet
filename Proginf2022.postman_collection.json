@@ -1,0 +1,1223 @@
+{
+	"info": {
+		"_postman_id": "9bdf039c-e8ef-4040-a6a9-4943eb7ccd8d",
+		"name": "Proginf2022",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3941610",
+		"_collection_link": "https://www.postman.com/lively-sunset-779000/workspace/api-teaching/collection/3941610-9bdf039c-e8ef-4040-a6a9-4943eb7ccd8d?action=share&creator=3941610&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "halozatok",
+			"item": [
+				{
+					"name": "Google accept language header test",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fr",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "www.google.com",
+							"host": [
+								"www",
+								"google",
+								"com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query parameter test",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.google.com/search?q=web+development&sxsrf=AJOqlzVmWBn9n4_2AkRNwEoG0vH-CZOSsA%3A1677336328976&source=hp&ei=CB_6Y_WrOPeE9u8P6LCZsAo&iflsig=AK50M_UAAAAAY_otGK6LJPoIDJK0qYpc8AVio-6iRh7X&ved=0ahUKEwj1z7fg9LD9AhV3gv0HHWhYBqYQ4dUDCAg&uact=5&oq=web+development&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEMgUIABCABDIKCAAQgAQQFBCHAjIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQ6BAgjECc6BQgAEJECOggILhCABBDUAjoLCC4QgAQQxwEQ0QM6CAguENQCEIAEOgsILhCABBDHARCvAToLCC4QrwEQxwEQgAQ6BwgAEIAEEAo6CAgAEIAEEMkDOggIABCABBCSA1AAWOgLYKsMaABwAHgAgAFWiAGfCJIBAjE0mAEAoAEB&sclient=gws-wiz",
+							"protocol": "https",
+							"host": [
+								"www",
+								"google",
+								"com"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "web+development"
+								},
+								{
+									"key": "sxsrf",
+									"value": "AJOqlzVmWBn9n4_2AkRNwEoG0vH-CZOSsA%3A1677336328976"
+								},
+								{
+									"key": "source",
+									"value": "hp"
+								},
+								{
+									"key": "ei",
+									"value": "CB_6Y_WrOPeE9u8P6LCZsAo"
+								},
+								{
+									"key": "iflsig",
+									"value": "AK50M_UAAAAAY_otGK6LJPoIDJK0qYpc8AVio-6iRh7X"
+								},
+								{
+									"key": "ved",
+									"value": "0ahUKEwj1z7fg9LD9AhV3gv0HHWhYBqYQ4dUDCAg"
+								},
+								{
+									"key": "uact",
+									"value": "5"
+								},
+								{
+									"key": "oq",
+									"value": "web+development"
+								},
+								{
+									"key": "gs_lcp",
+									"value": "Cgdnd3Mtd2l6EAMyBQgAEIAEMgUIABCABDIKCAAQgAQQFBCHAjIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQ6BAgjECc6BQgAEJECOggILhCABBDUAjoLCC4QgAQQxwEQ0QM6CAguENQCEIAEOgsILhCABBDHARCvAToLCC4QrwEQxwEQgAQ6BwgAEIAEEAo6CAgAEIAEEMkDOggIABCABBCSA1AAWOgLYKsMaABwAHgAgAFWiAGfCJIBAjE0mAEAoAEB"
+								},
+								{
+									"key": "sclient",
+									"value": "gws-wiz"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Missing content type in header response",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "openlibrary.org/people/username/lists.json",
+							"host": [
+								"openlibrary",
+								"org"
+							],
+							"path": [
+								"people",
+								"username",
+								"lists.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Content type json response",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://dog.ceo/api/breeds/image/random",
+							"protocol": "https",
+							"host": [
+								"dog",
+								"ceo"
+							],
+							"path": [
+								"api",
+								"breeds",
+								"image",
+								"random"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Firebase test request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://firestore.googleapis.com/v1/projects/chat-app-8a450/databases/(default)/documents/messages",
+							"protocol": "https",
+							"host": [
+								"firestore",
+								"googleapis",
+								"com"
+							],
+							"path": [
+								"v1",
+								"projects",
+								"chat-app-8a450",
+								"databases",
+								"(default)",
+								"documents",
+								"messages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cookie test",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "simple_api",
+			"item": [
+				{
+					"name": "Get projects",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response has 'projects' key and the response is 200 ok\", function () {",
+									"    pm.response.to.have.status(200); // check if the response status code is 200 OK",
+									"",
+									"    pm.expect(pm.response.json()).to.have.property('projects').that.is.an('array'); // check if the response has a 'projects' key and it is an array",
+									"",
+									"});",
+									"",
+									"pm.test(\"Response project has the necessary fields and tasks fields\", function () {",
+									"    ",
+									"    var projects = pm.response.json().projects;",
+									"    pm.expect(projects).to.have.lengthOf.at.least(1); // check if the array has at least one project object",
+									"",
+									"    for (var i = 0; i < projects.length; i++) {",
+									"        pm.expect(projects[i]).to.be.an('object'); // check if each element of the array is an object",
+									"        pm.expect(projects[i]).to.have.property('name').that.is.a('string'); // check if each project object has a 'name' property that is a string",
+									"        pm.expect(projects[i]).to.have.property('tasks').that.is.an('array'); // check if each project object has a 'tasks' property that is an array",
+									"",
+									"        var tasks = projects[i].tasks;",
+									"        for (var j = 0; j < tasks.length; j++) {",
+									"            pm.expect(tasks[j]).to.be.an('object'); // check if each element of the tasks array is an object",
+									"            pm.expect(tasks[j]).to.have.property('name').that.is.a('string'); // check if each task object has a 'name' property that is a string",
+									"            pm.expect(tasks[j]).to.have.property('completed').that.is.a('boolean'); // check if each task object has a 'completed' property that is a boolean",
+									"        }",
+									"    }",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/projects",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create project",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response matches expected JSON\", function () {",
+									"    pm.response.to.have.status(201);  // check if the response status code is 200 OK",
+									"",
+									"    var expectedJson = {",
+									"    \"name\": \"my new project\",",
+									"    \"tasks\": [",
+									"        {",
+									"            \"completed\": false,",
+									"            \"name\": \"my new task\"",
+									"        }",
+									"    ]",
+									"    };",
+									"    pm.expect(pm.response.json()).to.eql(expectedJson);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"my new project\",\n    \"tasks\": [{\n        \"name\": \"my new task\",\n        \"completed\": false\n    }]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/project",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"project"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create project error",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"my new project\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/project",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"project"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Project by name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response matches expected JSON\", function () {",
+									"    pm.response.to.have.status(200);  // check if the response status code is 200 OK",
+									"    var expectedJson = {",
+									"    \"name\": \"my new project\",",
+									"    \"tasks\": [",
+									"        {",
+									"            \"completed\": false,",
+									"            \"name\": \"my new task\"",
+									"        }",
+									"    ]",
+									"    };",
+									"    pm.expect(pm.response.json()).to.eql(expectedJson);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/project/my new project",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"project",
+								"my new project"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all tasks in project",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response has 'tasks' key and it is an array of objects representing tasks\", function () {",
+									"    pm.response.to.have.status(200); // check if the response status code is 200 OK",
+									"",
+									"    pm.expect(pm.response.json()).to.have.property('tasks').that.is.an('array'); // check if the response has a 'tasks' key and it is an array",
+									"",
+									"    var tasks = pm.response.json().tasks;",
+									"    pm.expect(tasks).to.have.lengthOf.at.least(1); // check if the array has at least one task object",
+									"",
+									"    for (var i = 0; i < tasks.length; i++) {",
+									"        pm.expect(tasks[i]).to.be.an('object'); // check if each element of the array is an object",
+									"        pm.expect(tasks[i]).to.have.property('name').that.is.a('string'); // check if each task object has a 'name' property that is a string",
+									"        pm.expect(tasks[i]).to.have.property('completed').that.is.a('boolean'); // check if each task object has a 'completed' property that is a boolean",
+									"    }",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/project/my first project/tasks",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"project",
+								"my first project",
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add task to project",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"my third project\",\n    \"completed\": { \"name\": \"new project\"}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/project/my first project/task",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"project",
+								"my first project",
+								"task"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "car_fleet",
+			"item": [
+				{
+					"name": "Create a new car",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Test creating car with license plate\", function () {",
+									"    var licensePlate = pm.variables.get('license_plate');",
+									"    const response = pm.response.json();",
+									"",
+									"    if (response.hasOwnProperty(\"message\")) {",
+									"        pm.expect(response.message).to.eql(`A car with plate '${licensePlate}' already exists.`);",
+									"    } else {",
+									"        pm.expect(response).to.have.property(\"license_plate\", licensePlate);",
+									"        pm.expect(response).to.have.property(\"type\");",
+									"        pm.expect(response).to.have.property(\"car_id\").to.be.a(\"number\");",
+									"        pm.expect(response).to.have.property(\"driver\");",
+									"    }",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"type\": \"trabant\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/car/{{license_plate}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"car",
+								"{{license_plate}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single car",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Validate the response for getting a car', function () {",
+									"    var licensePlate = pm.variables.get('license_plate');",
+									"    var response = pm.response.json();",
+									"    if (response.hasOwnProperty('license_plate')) {",
+									"        pm.expect(response).to.have.property('license_plate', licensePlate); // Check if the license plate in the response matches the requested license plate",
+									"        pm.expect(response).to.have.property('type'); // Check if the car type in the response is correct",
+									"        pm.expect(response).to.have.property('car_id'); // Check if the car ID exists in the response",
+									"        pm.expect(response).to.have.property('driver', null); // Check if the driver flag in the response is false",
+									"    } else {",
+									"        pm.expect(response).to.have.property('message', 'Car not found'); // Check if the message in the response matches the expected message",
+									"    }",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/car/{{license_plate}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"car",
+								"{{license_plate}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Register endpoint response test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    if (pm.response.code === 400) {",
+									"        pm.expect(jsonData).to.have.property(\"message\", \"A user with that username already exists\");",
+									"    } else if (pm.response.code === 201) {",
+									"        pm.expect(jsonData).to.have.property(\"message\", \"User created successfully.\");",
+									"    }",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\": \"Zsolt\", \"password\": \"12345\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Authenticate user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Check /auth endpoint response', function() {",
+									"    var jsonData = pm.response.json();",
+									"",
+									"    if (pm.response.code === 200) {",
+									"        pm.expect(jsonData).to.have.property('access_token');",
+									"        pm.globals.set(\"token\", jsonData.access_token);",
+									"    } else if (pm.response.code === 401) {",
+									"        pm.expect(jsonData).to.have.property('message', 'Wrong username or password');",
+									"    } else {",
+									"        pm.expect.fail('Unexpected response code');",
+									"    }",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\": \"Zsolt\", \"password\": \"12345\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get current user",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Check response for /user endpoint\", function () {",
+									"    var response = pm.response.json();",
+									"    if (response.hasOwnProperty(\"user\")) {",
+									"        pm.expect(response.user).to.have.property(\"name\");",
+									"        pm.expect(response.user).to.have.property(\"id\");",
+									"    } else if (response.hasOwnProperty(\"msg\")) {",
+									"        pm.expect(response).to.have.property(\"msg\");",
+									"    }",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All cars",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});",
+									"",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/cars",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new driver",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Driver creation\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Kamionos Hunor\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/driver",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"driver"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assign driver to car",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Validate the response for car driver assignment\", function () {",
+									"    var response = pm.response.json();",
+									"",
+									"    if (response.message === \"Car already has a driver.\" ||",
+									"        response.message === \"This car is already assigned to another driver\" ||",
+									"        response.message === \"Driver does not exist\" ||",
+									"        response.message === \"Car does not exist\" ||",
+									"        response.message === \"This driver is already assigned to another car\") {",
+									"        pm.expect(response).to.have.property(\"message\");",
+									"    } else {",
+									"        pm.expect(response.message).to.include('assigned');",
+									"    }",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"driver_id\": 1, \"car_id\":1}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/assign",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"assign"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modify car",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Validate the response for getting a car', function () {",
+									"    var licensePlate = pm.variables.get('license_plate');",
+									"    var response = pm.response.json();",
+									"    if (response.hasOwnProperty('license_plate')) {",
+									"        pm.expect(response).to.have.property('license_plate', licensePlate); // Check if the license plate in the response matches the requested license plate",
+									"        pm.expect(response).to.have.property('type', 'opel commondor'); // Check if the car type in the response is correct",
+									"        pm.expect(response).to.have.property('car_id'); // Check if the car ID exists in the response",
+									"        pm.expect(response).to.have.property('driver'); // Check if the driver flag in the response is false",
+									"    } else {",
+									"        pm.expect(response).to.have.property('message', 'Car not found'); // Check if the message in the response matches the expected message",
+									"    }",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"type\": \"opel commondor\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/car/{{license_plate}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"car",
+								"{{license_plate}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new fleet",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Fleet creation test\", function () {",
+									"    var response = pm.response.json();",
+									"    if (response.hasOwnProperty(\"name\")) {",
+									"        pm.expect(pm.response.code).to.equal(201);",
+									"        pm.expect(response).to.have.property(\"name\", pm.variables.get('new_fleet_name'));",
+									"        pm.expect(response).to.have.property(\"cars\");",
+									"    } else {",
+									"        pm.expect(pm.response.code).to.equal(400);",
+									"        pm.expect(response).to.have.property(\"message\", \"A fleet with name \" + pm.variables.get('new_fleet_name') + \" already exists.\");",
+									"    }",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/fleet/{{new_fleet_name}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"fleet",
+								"{{new_fleet_name}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Fleets",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Get all fleets endpoint test\", function () {",
+									"    var response = pm.response.json();",
+									"    pm.expect(response).to.have.property(\"fleets\").that.is.an(\"array\");",
+									"    response.fleets.forEach(function(fleet) {",
+									"        pm.expect(fleet).to.have.property(\"name\").that.is.a(\"string\");",
+									"        pm.expect(fleet).to.have.property(\"id\").that.is.a(\"number\");",
+									"        if (fleet.hasOwnProperty(\"cars\")) {",
+									"            pm.expect(fleet.cars).to.be.an(\"array\");",
+									"        }",
+									"    });",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/fleets",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"fleets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all drivers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Get all drivers\", function () {",
+									"    pm.response.to.have.status(200);",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.have.property(\"drivers\");",
+									"    pm.expect(jsonData.drivers).to.be.an(\"array\");",
+									"    pm.expect(jsonData.drivers.length).to.be.at.least(0);",
+									"",
+									"    if (jsonData.drivers.length > 0) {",
+									"        for (var i = 0; i < jsonData.drivers.length; i++) {",
+									"            var driver = jsonData.drivers[i];",
+									"            pm.expect(driver).to.have.property(\"name\");",
+									"        }",
+									"    }",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/driver",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"driver"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assign car to fleet",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Add car to fleet test\", function () {",
+									"    var responseCode = pm.response.code;",
+									"    var responseBody = pm.response.json();",
+									"",
+									"    if (responseCode === 201) {",
+									"        pm.expect(responseBody).to.deep.equal({",
+									"            \"message\": \"Car assigned to fleet\"",
+									"        });",
+									"    } else if (responseCode === 400) {",
+									"        pm.expect(responseBody).to.deep.equal({",
+									"            \"message\": \"Car already assigned to fleet.\"",
+									"        });",
+									"    } else if (responseCode === 404 && responseBody.message === \"Car not found.\") {",
+									"        pm.expect(responseBody).to.deep.equal({",
+									"            \"message\": \"Car not found.\"",
+									"        });",
+									"    } else if (responseCode === 404 && responseBody.message === \"Car not found.\") {",
+									"        pm.expect(responseBody).to.deep.equal({",
+									"            \"message\": \"Fleet not found.\"",
+									"        });",
+									"    } else {",
+									"        pm.expect.fail(\"Unexpected response: \" + responseCode + \" \" + responseBody);",
+									"    }",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"fleet_id\": 1, \"car_id\":2}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/car_fleet",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"car_fleet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a car",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Check delete car response\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    if (pm.response.code === 200) {",
+									"        pm.expect(jsonData.message).to.eql(\"Car deleted\");",
+									"    } else if (pm.response.code === 404) {",
+									"        pm.expect(jsonData.message).to.eql(\"Car not found.\");",
+									"    }",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/car/abc-123",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"car",
+								"abc-123"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "license_plate",
+			"value": "abc-124",
+			"type": "string"
+		},
+		{
+			"key": "new_fleet_name",
+			"value": "furgonok",
+			"type": "string"
+		}
+	]
+}

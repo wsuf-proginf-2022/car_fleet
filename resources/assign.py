@@ -52,15 +52,14 @@ class AssignDriverToCar(Resource):
       return {'message': 'Car not found.'}, 404
 
     if car.driver_id == driver.id:
-      return {'message': 'Driver already assigned to car.'}, 400
+      return {'message': 'This car is already assigned to another driver'}, 400
 
     other_driver = db.session.query(CarModel).filter(
         CarModel.driver_id == driver.id).first()
 
     if other_driver:
       return {
-          'message':
-          f"Driver {driver.name} is already assigned to another car!"
+          'message': f"This driver is already assigned to another car"
       }, 400
 
     if car.driver_id is not None:

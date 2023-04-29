@@ -13,12 +13,14 @@ class UserModel(BaseModel, MixinModel):
   # password = db.Column(db.String(80))
   password = mapped_column(String(80))
 
+  email = mapped_column(String(80))
+
   def __init__(self, username, password):
     self.username = username
     self.password = password
 
   def json(self):
-    return {'username': self.username, 'id': self.id}
+    return {'name': self.username, 'id': self.id}
 
   @classmethod
   def find_by_username(cls, username):

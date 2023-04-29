@@ -41,7 +41,7 @@ class CarModel(BaseModel, MixinModel):
     car_json = {
         'license_plate': self.license_plate,
         'type': self.type,
-        'id': self.id,
+        'car_id': self.id,
         'driver': None if driver is None else driver.json(),
     }
     if include_fleets:
