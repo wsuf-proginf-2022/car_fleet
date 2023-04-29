@@ -16,6 +16,9 @@ class FleetModel(BaseModel):
                       secondary='car_fleet',
                       back_populates='fleets')
 
+  def __init__(self, name):
+    self.name = name
+
   @classmethod
   def find_by_id(cls, id):
     return cls.query.filter_by(id=id).first()
