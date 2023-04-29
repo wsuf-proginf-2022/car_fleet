@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_restful import Api
 from flask_jwt_extended import JWTManager
+from flask_cors import CORS
 import os
 
 from models.car import CarModel
@@ -30,6 +31,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 api: Api = Api(app)
 jwt: JWTManager = JWTManager(app)
+CORS(app)
 
 db.init_app(app)
 
