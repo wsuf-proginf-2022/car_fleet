@@ -1,5 +1,6 @@
 from flask_restful import Resource, reqparse
 from models.car import CarModel
+from flask_jwt_extended import jwt_required
 
 
 class Car(Resource):
@@ -62,5 +63,6 @@ class Car(Resource):
 
 class CarList(Resource):
 
+  @jwt_required()
   def get(self):
     return {'cars': [car.json() for car in CarModel.query.all()]}

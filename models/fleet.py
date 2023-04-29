@@ -2,8 +2,10 @@ from db import db, BaseModel
 from sqlalchemy.orm import mapped_column, relationship
 from sqlalchemy import Integer, String, ForeignKey
 
+from models.mixin_model import MixinModel
 
-class FleetModel(BaseModel):
+
+class FleetModel(BaseModel, MixinModel):
   __tablename__ = 'fleets'
   # id = db.Column(db.Integer, primary_key=True)
   id = mapped_column(Integer, primary_key=True)
@@ -27,13 +29,8 @@ class FleetModel(BaseModel):
   def find_by_name(cls, name):
     return cls.query.filter_by(name=name).first()
 
-  def json(self):
-    return {'name': self.name, 'id': self.id}
-
-  def save_to_db(self):
-    db.session.add(self)
-    db.session.commit()
-
-  def delete_from_db(self):
-    db.session.delete(self)
-    db.session.commit()
+  def json(self, include_cars=True):
+    fleet = {'name': self.name, 'id': self.id}
+    if include_cars:
+      fleet['cars'] = [car.json(include_fleets=False) for car in self.cars]
+    return fleet

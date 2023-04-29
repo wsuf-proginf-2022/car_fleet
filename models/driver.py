@@ -2,8 +2,10 @@ from db import db, BaseModel
 from sqlalchemy.orm import mapped_column, relationship
 from sqlalchemy import Integer, String
 
+from models.mixin_model import MixinModel
 
-class DriverModel(BaseModel):
+
+class DriverModel(BaseModel, MixinModel):
   __tablename__ = 'drivers'
   # id = db.Column(db.Integer, primary_key=True)
   id = mapped_column(Integer, primary_key=True)
@@ -20,10 +22,6 @@ class DriverModel(BaseModel):
 
   def json(self):
     return {'name': self.name, 'id': self.id}
-
-  def save_to_db(self):
-    db.session.add(self)
-    db.session.commit()
 
   @classmethod
   def find_by_id(cls, id):

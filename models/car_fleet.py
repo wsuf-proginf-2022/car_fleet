@@ -1,8 +1,9 @@
 from db import db, BaseModel
+from models.mixin_model import MixinModel
 # from sqlalchemy.orm import mapped_column, relationship
 
 
-class CarFleetLink(BaseModel):
+class CarFleetLink(BaseModel, MixinModel):
   __tablename__ = 'car_fleet'
   car_id = db.Column(db.Integer, db.ForeignKey('cars.id'), primary_key=True)
   fleet_id = db.Column(db.Integer,
@@ -22,7 +23,3 @@ class CarFleetLink(BaseModel):
   @classmethod
   def link_exists(cls, car_id, fleet_id):
     return cls.query.filter_by(car_id=car_id, fleet_id=fleet_id).first()
-
-  def save_to_db(self):
-    db.session.add(self)
-    db.session.commit()

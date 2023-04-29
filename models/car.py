@@ -2,9 +2,11 @@ from db import db, BaseModel
 from sqlalchemy.orm import mapped_column, relationship
 from sqlalchemy import Integer, String
 from sqlalchemy import ForeignKey
+from models.driver import DriverModel
+from models.mixin_model import MixinModel
 
 
-class CarModel(BaseModel):
+class CarModel(BaseModel, MixinModel):
   __tablename__ = 'cars'
   # id = db.Column(db.Integer, primary_key=True)
   id = mapped_column(Integer, primary_key=True)
@@ -26,14 +28,6 @@ class CarModel(BaseModel):
     self.license_plate = license_plate
     self.type = type
 
-  def save_to_db(self):
-    db.session.add(self)
-    db.session.commit()
-
-  def delete_from_db(self):
-    db.session.delete(self)
-    db.session.commit()
-
   @classmethod
   def find_by_id(cls, id):
     return cls.query.filter_by(id=id).first()
@@ -42,9 +36,16 @@ class CarModel(BaseModel):
   def find_by_plate(cls, license_plate):
     return cls.query.filter_by(license_plate=license_plate).first()
 
-  def json(self):
-    return {
+  def json(self, include_fleets=True):
+    driver = DriverModel.find_by_id(self.driver_id)
+    car_json = {
         'license_plate': self.license_plate,
         'type': self.type,
-        'id': self.id
+        'id': self.id,
+        'driver': None if driver is None else driver.json(),
     }
+    if include_fleets:
+      car_json['fleets'] = [
+          fleet.json(include_cars=False) for fleet in self.fleets
+      ]
+    return car_json
