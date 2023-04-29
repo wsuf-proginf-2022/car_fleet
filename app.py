@@ -20,8 +20,8 @@ from resources.auth import Auth
 from resources.user import User
 from db import db
 
-# db_path: str = os.path.join(os.path.dirname(__file__), 'data.db')
-# db_uri: str = f'sqlite:///{db_path}'
+db_path: str = os.path.join(os.path.dirname(__file__), 'data.db')
+db_uri: str = f'sqlite:///{db_path}'
 
 # create database car_fleet;
 # create user 'car_fleet'@'localhost' identified by '12345';
@@ -29,7 +29,7 @@ from db import db
 # flush privileges;
 
 # pip install mysqlclient
-db_uri: str = f'mysql+mysqldb://car_fleet:12345@localhost:3306/car_fleet'
+# db_uri: str = f'mysql+mysqldb://car_fleet:12345@localhost:3306/car_fleet'
 
 app: Flask = Flask(__name__)
 
