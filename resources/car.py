@@ -10,7 +10,10 @@ class Car(Resource):
                       help='This field cannot be left blank')
 
   def get(self, plate):
-    return {'plate': plate}
+    car = CarModel.find_by_plate(plate)
+    if car:
+      return car.json()
+    return {'message': 'Car not found'}, 404
 
   # plate is a path parameter
   def post(self, plate):
@@ -35,9 +38,29 @@ class Car(Resource):
     return car.json(), 201
 
   def delete(self, plate):
+    # car = CarModel.query.filter_by(license_plate=plate).first()
     car = CarModel.find_by_plate(plate)
     if car:
       car.delete_from_db()
       return {'message': 'Car deleted'}
 
     return {'message': 'Car not found.'}, 404
+
+  def put(self, plate):
+    data = Car.parser.parse_args()
+
+    car = CarModel.find_by_plate(plate)
+
+    if car:
+      car.type = data['type']
+      car.save_to_db()
+    else:
+      return {'message': 'Car not found.'}, 404
+
+    return car.json()
+
+
+class CarList(Resource):
+
+  def get(self):
+    return {'cars': [car.json() for car in CarModel.query.all()]}

@@ -3,8 +3,11 @@ from flask_restful import Api
 import os
 
 from models.car import CarModel
+from models.driver import DriverModel
 
-from resources.car import Car
+from resources.car import Car, CarList
+from resources.driver import Driver
+from resources.assign import AssignDriverToCar
 from db import db
 
 app: Flask = Flask(__name__)
@@ -26,3 +29,6 @@ def create_tables() -> None:
 
 
 api.add_resource(Car, '/car/<string:plate>')
+api.add_resource(CarList, '/cars')
+api.add_resource(Driver, '/driver')
+api.add_resource(AssignDriverToCar, '/assign')
