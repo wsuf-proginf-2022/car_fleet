@@ -14,7 +14,13 @@ class CarModel(BaseModel):
   type = mapped_column(String(50))
   driver_id = mapped_column(Integer, ForeignKey('drivers.id'), unique=True)
 
+  # one to one relationship
   driver = relationship('DriverModel', back_populates='car', uselist=False)
+  # one to many relationship
+  # fleets = db.relationship('CarFleetLink', back_populates='car')
+  fleets = relationship('FleetModel',
+                        secondary='car_fleet',
+                        back_populates='cars')
 
   def __init__(self, license_plate, type):
     self.license_plate = license_plate

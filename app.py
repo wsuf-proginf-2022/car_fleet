@@ -4,6 +4,8 @@ import os
 
 from models.car import CarModel
 from models.driver import DriverModel
+from models.fleet import FleetModel
+from models.car_fleet import CarFleetLink
 
 from resources.car import Car, CarList
 from resources.driver import Driver
