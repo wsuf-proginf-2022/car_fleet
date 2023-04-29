@@ -1,5 +1,5 @@
 from db import db, BaseModel
-from sqlalchemy.orm import mapped_column, relationship
+# from sqlalchemy.orm import mapped_column, relationship
 
 
 class CarFleetLink(BaseModel):
@@ -18,3 +18,11 @@ class CarFleetLink(BaseModel):
   def __init__(self, car_id, fleet_id):
     self.car_id = car_id
     self.fleet_id = fleet_id
+
+  @classmethod
+  def link_exists(cls, car_id, fleet_id):
+    return cls.query.filter_by(car_id=car_id, fleet_id=fleet_id).first()
+
+  def save_to_db(self):
+    db.session.add(self)
+    db.session.commit()
